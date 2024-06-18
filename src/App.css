@@ -1,0 +1,254 @@
+/**HEADER*/
+.App {
+  text-align: center;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.App-header {
+  background-color: #ff93f4;
+  min-height: 2em;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1em;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.column {
+  flex-direction: column;
+}
+.Logo {
+  display: flex;
+}
+.sections {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 1.25em;
+  margin: 15px;
+}
+.sections:hover {
+  border-bottom: 0.18em solid #d4ff00;
+}
+
+.title {
+  font-size: 5em;
+  color: white;
+}
+
+.button {
+  width: 8.6em;
+  height: 3em;
+  border-radius: 1.8em;
+  background-color: #d4ff00;
+  color: black;
+  border: none;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+.button:hover {
+  background-color: #ff93f4;
+}
+.nav-toggle {
+  display: none;
+}
+
+.menu-open {
+  background-color: #ff93f4;
+}
+
+.menu-open .App-header {
+  height: 800px;
+}
+
+/*MAIN*/
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../src/img/group.svg");
+  background-repeat: no-repeat;
+  height: 25em;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 3.75em;
+}
+.boxSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3.1em;
+}
+.box {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  width: 18.7em;
+  height: 31.2em;
+  margin: 1.8em;
+  border-radius: 0.6em;
+  height: 21em;
+  box-shadow: 1.5px 1.5px 2px 3px rgba(0, 0, 0, 0.2);
+  padding: 1.2em;
+}
+.items {
+  color: #ff93f4;
+  font-weight: 800;
+  font-size: 2.5em;
+}
+.text {
+  padding: 0 2.5em 0 2.5em;
+}
+.boxCircle {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+.circle {
+  position: absolute;
+  top:30em;
+  width: 20em; /* Ancho del semicírculo (la mitad de la altura) */
+  height:30em; /* Altura del semicírculo */
+  background-color: #ff93f4; /* Color del semicírculo */
+  border-top-left-radius: 30em; /* Radio del borde superior izquierdo */
+  border-bottom-left-radius: 30em; /* Radio del borde inferior izquierdo */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.boxCircle2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.circle2 {
+  width: 4em;
+  height:8em; 
+  background-color: #ff93f4; 
+  border-radius: 50%;
+  border-top-right-radius: 30em; 
+  border-bottom-right-radius: 30em; 
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transform: translatex(-50%); 
+}
+
+
+/*RESPONSIVE*/
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 1110px) {
+  .box {
+    height: 31em;
+    width: 19.7em;
+  }
+  .circle {
+    width: 15em; 
+    height:20em;  
+  }
+}
+@media (max-width: 820px) {
+  .boxSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .box {
+    width: 38em;
+  }
+  .boxSection {
+    padding: 0;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  .boxSection {
+    padding: 0;
+  }
+
+  .sections {
+    top: 80px;
+    text-decoration: none;
+    color: white;
+    padding: 1.25em;
+    margin: 15px;
+    transform: translate(-250%) !important;
+  }
+
+  .boxNavSetions {
+    display: none;
+    flex-direction: column;
+    background-color: #ff93f4; /* Cambia el color de fondo del menú */
+  }
+
+  .boxNavSetions.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex !important;
+    cursor: pointer;
+    
+  }
+  
+  .App-header {
+    transition: height 0.3s ease-in-out;
+  }
+
+  .App-header.menu-open {
+    height: 100vh;
+  }
+  .box {
+    height: auto;
+    width: auto;
+  }
+  .banner {
+    width: auto;
+    height: auto;
+  }
+  .circle {
+    width: 10em; 
+    height:15em;
+    top:40em;  
+  }
+  
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: auto;
+  }
+  .banner {
+    padding: 15px 0px;
+  }
+  .sections {
+    transform: translate(-180%) !important;
+  }
+  .circle {
+    width: 5em; 
+    height:10em;  
+    top:40em;
+    
+  }
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
